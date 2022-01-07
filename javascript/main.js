@@ -1,27 +1,31 @@
-//--------------- DESAFÍO 2 -----------------//
+/* //--------------- DESAFÍO 3 Ciclos/iteraciones -----------------// */
 
-//Título
-alert("Eres mayor de edad??");
+alert("Escoge una opción:");
+let option = Number(
+	prompt(
+		" 1. Últimos pilotos de F1 campeones del mundo - 2. Últimos equipos de F1 campeones del mundo"
+	)
+);
 
-//Variables de entrada tipo string
-let name = prompt("Por favor coloca tu Nombre");
-let lastname = prompt("Por favor coloca tu Apellido");
-
-//Variables de entrada tipo string con su respectivas conversiones a datos númericos
-let ageIn = Number(prompt("Por favor coloca el año en el que naciste:"));
-
-//Calculo de edad
-let cal = 2021 - ageIn;
-
-//función if para mostrar cálculo solo si el año de entrada en mayor a 2021, sino mostrará que el dato es incorrecto
-if (ageIn > 2021) {
-	alert("Año incorrecto");
-
-	//condiciones para validar si la persona es mayor o menor de edad
-} else if (cal >= 18) {
-	alert(`${name} ${lastname} tiene ${cal} años, es mayor de edad.`);
-} else if (cal < 18) {
-	alert(`${name} ${lastname} tiene ${cal} años, es menor de edad.`);
+if (option === 1) {
+	const cars = [
+		"Max Verstappen",
+		"Lewis Hamilton",
+		"Nico Rosberg",
+		"Sebastian Vettel",
+	];
+	let text = "";
+	for (let i = 0; i < cars.length; i++) {
+		text = cars[i] + " ";
+		console.log(text);
+	}
+} else if (option === 2) {
+	const cars = ["Mercedes ", "Red Bull", "Brawn", "Ferrari"];
+	let text = "";
+	for (let i = 0; i < cars.length; i++) {
+		text = cars[i] + " ";
+		console.log(text);
+	}
 } else {
-	alert("Datos incorrectos");
+	alert("Opción Incorrecta");
 }

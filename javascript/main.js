@@ -1,27 +1,49 @@
-//--------------- DESAFÍO COMPLEMENTARIO -----------------//
+/* -----------Button to drivers 2020 Json--------------  */
+document.getElementById("btn1").onclick = function () {
+  // access to json
+  let url = "/drivers2020.JSON";
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => showData(data));
+  // data to table (index)
+  const showData = (data) => {
+    let body = "";
+    for (let i = 0; i < data.length; i++) {
+      body += `<tr>
+	  <td>${data[i].permanentNumber}</td>
+	  <td>${data[i].givenName}</td>
+	  <td>${data[i].familyName}</td>
+	  <td>${data[i].dateOfBirth}</td>
+	  <td>${data[i].nationality}</td>
+	  
+	  </tr> `;
+    }
 
-alert("Cálculo de Área:");
-let option = Number(prompt(" 1. Triángulo - 2. Cuadrado - 3. Círculo"));
+    document.getElementById("data").innerHTML = body;
+  };
+};
 
-// ---------------triangle calculation---------------//
-if (option === 1) {
-	let firstValue = Number(prompt("Ingrese la base en metros"));
-	let secondValue = Number(prompt("Ingrese la altura en metros"));
-	const triangle = (a, b) => ((a * b) / 2).toFixed(2);
-	alert(`${triangle(firstValue, secondValue)} metros cuadrados.`);
+/* -----------Button to drivers 2021 Json--------------  */
+document.getElementById("btn2").onclick = function () {
+  // access to json
+  let url = "/drivers2021.JSON";
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => showData(data));
+  // data to table (index)
+  const showData = (data) => {
+    let body = "";
+    for (let i = 0; i < data.length; i++) {
+      body += `<tr>
+	  <td>${data[i].permanentNumber}</td>
+	  <td>${data[i].givenName}</td>
+	  <td>${data[i].familyName}</td>
+	  <td>${data[i].dateOfBirth}</td>
+	  <td>${data[i].nationality}</td>
+	  
+	  </tr> `;
+    }
 
-	// ---------------square calculation---------------//
-} else if (option === 2) {
-	let firstValue = Number(prompt("Ingrese la longitud de los lados en metros"));
-	const square = (a) => (a * a).toFixed(2);
-	alert(`${square(firstValue)} metros cuadrados.`);
-
-	// ---------------circle calculation---------------//
-} else if (option === 3) {
-	let firstValue = Number(prompt("Ingrese el radio en metros"));
-	const circle = (a) => (Math.PI * a ** 2).toFixed(2);
-	alert(`${circle(firstValue)} metros cuadrados.`);
-	// --------------- incorrect value ---------------//
-} else {
-	alert("Opción Incorrecta");
-}
+    document.getElementById("data").innerHTML = body;
+  };
+};

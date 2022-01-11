@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Javascript Coderhouse</title>
-	</head>
-	<body>
-		<script src="javascript/main.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Javascript Coderhouse</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-wrapper">
+        <a class="brand-logo" href="#"
+          ><img src="images/logo.svg" alt="logo"
+        /></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
+            <a
+              href="https://github.com/ricardoyepezz/coderhouseJS"
+              target="_blank"
+              >Github</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br />
+    <div class="center-align">
+      <button class="black btn" id="btn1">2020 F1 Drivers</button>
+      <button class="black btn" id="btn2">2021 F1 Drivers</button>
+    </div>
+    <h4 class="center-align">F1 Drivers</h4>
+    <table class="container">
+      <thead>
+        <tr>
+          <th>Number</th>
+          <th>Name</th>
+          <th>Lastname</th>
+          <th>Date Of Birth</th>
+          <th>Nationality</th>
+        </tr>
+      </thead>
+
+      <tbody id="data"></tbody>
+    </table>
+    <script src="javascript/main.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
 </html>
